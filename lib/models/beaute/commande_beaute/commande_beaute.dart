@@ -17,6 +17,7 @@ class CommandeBeaute {
     required this.prestation,
     required this.prix,
     required this.status,
+    this.pretDate,
   });
   final String id;
   DateTime? date;
@@ -25,9 +26,14 @@ class CommandeBeaute {
   final Prestation prestation;
   final double prix;
   final CommandeStatusBeaute status;
+  DateTime? pretDate;
 
   setDate() async {
     date = await NTP.now();
+  }
+
+  setPretDate(DateTime pretDate) {
+    this.pretDate = pretDate;
   }
 
   factory CommandeBeaute.fromJson(Map<String, dynamic> json) =>
