@@ -14,6 +14,7 @@ class Prestataire {
     this.note,
     required this.actif,
     this.description,
+    this.idRestaurant,
   });
   final String id;
   final String nom;
@@ -24,6 +25,7 @@ class Prestataire {
   final double? note;
   final bool actif;
   final String? description;
+  final String? idRestaurant;
 
   factory Prestataire.fromJson(Map<String, dynamic> json) =>
       _$PrestataireFromJson(json);
