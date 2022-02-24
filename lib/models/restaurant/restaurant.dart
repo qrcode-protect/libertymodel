@@ -1,4 +1,5 @@
 export 'Categorie_restaurant/Categorie_restaurant.dart';
+export 'Categorie_restaurant/Categorie_restaurant.dart';
 export 'commande_restaurant/commande_restaurant.dart';
 export 'commande_restaurant_panier/commande_restaurant_panier.dart';
 export 'commande_status_restaurant/commande_status_restaurant.dart';
