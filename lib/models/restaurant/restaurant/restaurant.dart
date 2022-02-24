@@ -12,6 +12,7 @@ class Restaurant {
     this.avatar,
     this.description,
     this.categorie,
+    this.enLigne,
   });
   String? id;
   String? nom;
@@ -19,6 +20,7 @@ class Restaurant {
   CategorieRestaurant? categorie;
   String? description;
   Adresse? adresse;
+  bool? enLigne;
 
   factory Restaurant.fromJson(Map<String, dynamic> json) =>
       _$RestaurantFromJson(json);
