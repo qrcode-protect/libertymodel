@@ -16,6 +16,11 @@ Prestataire _$PrestataireFromJson(Map json) => Prestataire(
       note: (json['note'] as num?)?.toDouble(),
       actif: json['actif'] as bool,
       description: json['description'] as String?,
+      idRestaurant: json['idRestaurant'] as String?,
+      tarifsLivraison: json['tarifsLivraison'] == null
+          ? null
+          : TarifsLivraison.fromJson(
+              Map<String, dynamic>.from(json['tarifsLivraison'] as Map)),
     );
 
 Map<String, dynamic> _$PrestataireToJson(Prestataire instance) =>
@@ -29,4 +34,6 @@ Map<String, dynamic> _$PrestataireToJson(Prestataire instance) =>
       'note': instance.note,
       'actif': instance.actif,
       'description': instance.description,
+      'idRestaurant': instance.idRestaurant,
+      'tarifsLivraison': instance.tarifsLivraison?.toJson(),
     };

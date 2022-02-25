@@ -27,6 +27,9 @@ CommandeRestaurant _$CommandeRestaurantFromJson(Map json) => CommandeRestaurant(
               Map<String, dynamic>.from(e as Map)))
           .toList(),
       prixLivraison: (json['prixLivraison'] as num?)?.toDouble(),
+      finAttente: json['finAttente'] == null
+          ? null
+          : DateTime.parse(json['finAttente'] as String),
     );
 
 Map<String, dynamic> _$CommandeRestaurantToJson(CommandeRestaurant instance) =>
@@ -41,4 +44,5 @@ Map<String, dynamic> _$CommandeRestaurantToJson(CommandeRestaurant instance) =>
       'restaurantCommande':
           instance.restaurantCommande.map((e) => e.toJson()).toList(),
       'prixLivraison': instance.prixLivraison,
+      'finAttente': instance.finAttente?.toIso8601String(),
     };

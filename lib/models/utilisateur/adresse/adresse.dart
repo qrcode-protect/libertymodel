@@ -18,6 +18,10 @@ class Adresse {
   final int codepostal;
   final String pays;
 
+  String getAdresseString() {
+    return '$rue $codepostal $ville';
+  }
+
   factory Adresse.fromJson(Map<String, dynamic> json) =>
       _$AdresseFromJson(json);
 
