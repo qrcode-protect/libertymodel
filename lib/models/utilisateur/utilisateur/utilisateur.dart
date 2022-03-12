@@ -11,7 +11,7 @@ class Utilisateur {
     required this.nom,
     required this.email,
     required this.phone,
-    required this.token,
+    this.token,
     required this.avatar,
     this.age,
     this.sexe,
@@ -22,7 +22,7 @@ class Utilisateur {
   final String nom;
   final String email;
   final int phone;
-  final String token;
+  final String? token;
   final String avatar;
   final int? age;
   final bool? sexe;

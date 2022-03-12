@@ -11,7 +11,7 @@ Utilisateur _$UtilisateurFromJson(Map json) => Utilisateur(
       nom: json['nom'] as String,
       email: json['email'] as String,
       phone: json['phone'] as int,
-      token: json['token'] as String,
+      token: json['token'] as String?,
       avatar: json['avatar'] as String,
       age: json['age'] as int?,
       sexe: json['sexe'] as bool?,
