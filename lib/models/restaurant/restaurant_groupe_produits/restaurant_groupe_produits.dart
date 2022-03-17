@@ -4,13 +4,14 @@ part 'restaurant_groupe_produits.g.dart';
 
 @JsonSerializable()
 class RestaurantGroupeProduits {
-  RestaurantGroupeProduits(
-      {this.rank,
-      this.id,
-      this.nom,
-      this.description,
-      this.requis,
-      this.choix});
+  RestaurantGroupeProduits({
+    this.rank,
+    this.id,
+    this.nom,
+    this.description,
+    this.requis,
+    this.choix,
+  });
 
   final int? rank;
   final String? id;
