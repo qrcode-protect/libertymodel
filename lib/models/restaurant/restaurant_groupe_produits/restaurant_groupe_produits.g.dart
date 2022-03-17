@@ -13,6 +13,7 @@ RestaurantGroupeProduits _$RestaurantGroupeProduitsFromJson(Map json) =>
       nom: json['nom'] as String?,
       description: json['description'] as String?,
       requis: json['requis'] as bool?,
+      choix: json['choix'] as bool?,
     );
 
 Map<String, dynamic> _$RestaurantGroupeProduitsToJson(
@@ -23,4 +24,5 @@ Map<String, dynamic> _$RestaurantGroupeProduitsToJson(
       'nom': instance.nom,
       'description': instance.description,
       'requis': instance.requis,
+      'choix': instance.choix,
     };
