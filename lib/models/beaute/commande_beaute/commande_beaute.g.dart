@@ -19,6 +19,9 @@ CommandeBeaute _$CommandeBeauteFromJson(Map json) => CommandeBeaute(
       prix: (json['prix'] as num).toDouble(),
       status: CommandeStatusBeaute.fromJson(
           Map<String, dynamic>.from(json['status'] as Map)),
+      pretDate: json['pretDate'] == null
+          ? null
+          : DateTime.parse(json['pretDate'] as String),
     );
 
 Map<String, dynamic> _$CommandeBeauteToJson(CommandeBeaute instance) =>
@@ -30,4 +33,5 @@ Map<String, dynamic> _$CommandeBeauteToJson(CommandeBeaute instance) =>
       'prestation': instance.prestation.toJson(),
       'prix': instance.prix,
       'status': instance.status.toJson(),
+      'pretDate': instance.pretDate?.toIso8601String(),
     };

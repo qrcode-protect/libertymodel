@@ -19,6 +19,7 @@ class CommandeRestaurant {
     this.livraisonStatus,
     required this.restaurantCommande,
     this.prixLivraison,
+    this.finAttente,
   });
   final String id;
   final Restaurant restaurant;
@@ -29,6 +30,11 @@ class CommandeRestaurant {
   CommandeStatusRestaurant? livraisonStatus;
   final List<CommandeRestaurantPanier> restaurantCommande;
   double? prixLivraison;
+  DateTime? finAttente;
+
+  setFinAttente(DateTime finAttente) {
+    this.finAttente = finAttente;
+  }
 
   factory CommandeRestaurant.fromJson(Map<String, dynamic> json) =>
       _$CommandeRestaurantFromJson(json);
