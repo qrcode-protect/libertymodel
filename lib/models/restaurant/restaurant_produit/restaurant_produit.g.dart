@@ -11,6 +11,7 @@ RestaurantProduit _$RestaurantProduitFromJson(Map json) => RestaurantProduit(
       groupeId: json['groupeId'] as String?,
       nom: json['nom'] as String?,
       prix: (json['prix'] as num?)?.toDouble(),
+      quantity: json['quantity'] as int?,
     );
 
 Map<String, dynamic> _$RestaurantProduitToJson(RestaurantProduit instance) =>
@@ -19,4 +20,5 @@ Map<String, dynamic> _$RestaurantProduitToJson(RestaurantProduit instance) =>
       'groupeId': instance.groupeId,
       'nom': instance.nom,
       'prix': instance.prix,
+      'quantity': instance.quantity,
     };
