@@ -14,6 +14,8 @@ RestaurantGroupeProduits _$RestaurantGroupeProduitsFromJson(Map json) =>
       description: json['description'] as String?,
       requis: json['requis'] as bool?,
       choix: json['choix'] as bool?,
+      choixMin: json['choixMin'] as int?,
+      choixMax: json['choixMax'] as int?,
     );
 
 Map<String, dynamic> _$RestaurantGroupeProduitsToJson(
@@ -25,4 +27,6 @@ Map<String, dynamic> _$RestaurantGroupeProduitsToJson(
       'description': instance.description,
       'requis': instance.requis,
       'choix': instance.choix,
+      'choixMin': instance.choixMin,
+      'choixMax': instance.choixMax,
     };

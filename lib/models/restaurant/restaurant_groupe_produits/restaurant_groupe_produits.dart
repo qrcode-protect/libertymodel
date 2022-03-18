@@ -11,6 +11,8 @@ class RestaurantGroupeProduits {
     this.description,
     this.requis,
     this.choix,
+    this.choixMin,
+    this.choixMax,
   });
 
   final int? rank;
@@ -19,6 +21,9 @@ class RestaurantGroupeProduits {
   final String? description;
   final bool? requis;
   final bool? choix;
+  final int? choixMin;
+
+  final int? choixMax;
 
   factory RestaurantGroupeProduits.fromJson(Map<String, dynamic> json) =>
       _$RestaurantGroupeProduitsFromJson(json);
