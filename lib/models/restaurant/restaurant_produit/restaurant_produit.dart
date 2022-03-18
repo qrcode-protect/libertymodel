@@ -18,7 +18,9 @@ class RestaurantProduit {
   final double? prix;
   int? quantity;
 
-  set setQuantity(int quantity) => this.quantity = quantity;
+  void setQuantity(int quantity) {
+    this.quantity = quantity;
+  }
 
   factory RestaurantProduit.fromJson(Map<String, dynamic> json) =>
       _$RestaurantProduitFromJson(json);
