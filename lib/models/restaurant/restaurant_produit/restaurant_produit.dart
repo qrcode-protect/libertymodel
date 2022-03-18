@@ -9,13 +9,11 @@ class RestaurantProduit {
     this.groupeId,
     this.nom,
     this.prix,
-    this.quantity,
   });
   final String? id;
   final String? groupeId;
   final String? nom;
   final double? prix;
-  final int ? quantity;
 
   factory RestaurantProduit.fromJson(Map<String, dynamic> json) =>
       _$RestaurantProduitFromJson(json);
