@@ -55,6 +55,16 @@ class CommandeLivraison {
         colisRecup: json['colisRecup'] != null ? json['colisRecup'] : false,
         date: DateTime.parse(json['date'] as String),
         restauration: true,
+        restaurant: json['restaurant'] != null
+            ? Restaurant.fromJson(
+                Map<String, dynamic>.from(json['restaurant'] as Map))
+            : null,
+        restaurantCommande: json['restaurantCommande'] != null
+            ? (json['restaurantCommande'] as List<dynamic>)
+                .map((e) => CommandeRestaurantPanier.fromJson(
+                    Map<String, dynamic>.from(e as Map)))
+                .toList()
+            : null,
       );
     } else {
       return _$CommandeLivraisonFromJson(json);
