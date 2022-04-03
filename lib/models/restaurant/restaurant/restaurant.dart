@@ -14,6 +14,7 @@ class Restaurant {
     this.categorie,
     this.enLigne,
     this.ouvert,
+    this.adresse,
     this.tempMinPreparation,
     this.tempMAxPreparation,
   });
