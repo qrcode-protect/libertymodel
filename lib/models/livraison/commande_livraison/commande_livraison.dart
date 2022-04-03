@@ -1,4 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
+import 'package:libertymodel/libertymodel.dart';
 import 'package:libertymodel/models/beaute/prestataire/prestataire.dart';
 import 'package:libertymodel/models/livraison/commande_status_livraison/commande_status_livraison.dart';
 import 'package:libertymodel/models/utilisateur/adresse/adresse.dart';
@@ -20,6 +21,8 @@ class CommandeLivraison {
     required this.destination,
     required this.colisRecup,
     this.restauration,
+    this.restaurant,
+    this.restaurantCommande,
   });
   final String id;
   DateTime? date;
@@ -31,6 +34,8 @@ class CommandeLivraison {
   final Adresse destination;
   final bool colisRecup;
   final bool? restauration;
+  final Restaurant? restaurant;
+  final List<CommandeRestaurantPanier>? restaurantCommande;
 
   setDate() async {
     date = await NTP.now();
@@ -50,6 +55,16 @@ class CommandeLivraison {
         colisRecup: json['colisRecup'] != null ? json['colisRecup'] : false,
         date: DateTime.parse(json['date'] as String),
         restauration: true,
+        restaurant: json['restaurant'] != null
+            ? Restaurant.fromJson(
+                Map<String, dynamic>.from(json['restaurant'] as Map))
+            : null,
+        restaurantCommande: json['restaurantCommande'] != null
+            ? (json['restaurantCommande'] as List<dynamic>)
+                .map((e) => CommandeRestaurantPanier.fromJson(
+                    Map<String, dynamic>.from(e as Map)))
+                .toList()
+            : null,
       );
     } else {
       return _$CommandeLivraisonFromJson(json);
