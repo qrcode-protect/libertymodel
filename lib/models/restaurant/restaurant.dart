@@ -8,3 +8,4 @@ export 'restaurant_groupe_produits/restaurant_groupe_produits.dart';
 export 'restaurant_menu/restaurant_menu.dart';
 export 'restaurant_produit/restaurant_produit.dart';
 export 'tarifs_livraison/tarifs_livraison.dart';
+export 'restaurant_menu_categorie/restaurant_menu_categorie.dart';
