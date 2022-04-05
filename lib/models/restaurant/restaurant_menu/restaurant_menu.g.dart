@@ -16,6 +16,7 @@ RestaurantMenu _$RestaurantMenuFromJson(Map json) => RestaurantMenu(
           : CategorieRestaurant.fromJson(
               Map<String, dynamic>.from(json['categorie'] as Map)),
       avatar: json['avatar'] as String?,
+      actif: json['actif'] as bool? ?? true,
     );
 
 Map<String, dynamic> _$RestaurantMenuToJson(RestaurantMenu instance) =>
@@ -26,4 +27,5 @@ Map<String, dynamic> _$RestaurantMenuToJson(RestaurantMenu instance) =>
       'prix': instance.prix,
       'categorie': instance.categorie?.toJson(),
       'description': instance.description,
+      'actif': instance.actif,
     };
