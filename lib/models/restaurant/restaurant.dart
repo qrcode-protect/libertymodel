@@ -9,3 +9,4 @@ export 'restaurant_menu/restaurant_menu.dart';
 export 'restaurant_produit/restaurant_produit.dart';
 export 'tarifs_livraison/tarifs_livraison.dart';
 export 'restaurant_menu_categorie/restaurant_menu_categorie.dart';
+export 'horaires_restaurant/horaires_restaurant.dart';
