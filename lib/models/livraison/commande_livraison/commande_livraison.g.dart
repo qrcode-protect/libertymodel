@@ -31,6 +31,7 @@ CommandeLivraison _$CommandeLivraisonFromJson(Map json) => CommandeLivraison(
           ?.map((e) => CommandeRestaurantPanier.fromJson(
               Map<String, dynamic>.from(e as Map)))
           .toList(),
+      codeValidation: json['codeValidation'] as String?,
     );
 
 Map<String, dynamic> _$CommandeLivraisonToJson(CommandeLivraison instance) =>
@@ -48,4 +49,5 @@ Map<String, dynamic> _$CommandeLivraisonToJson(CommandeLivraison instance) =>
       'restaurant': instance.restaurant?.toJson(),
       'restaurantCommande':
           instance.restaurantCommande?.map((e) => e.toJson()).toList(),
+      'codeValidation': instance.codeValidation,
     };

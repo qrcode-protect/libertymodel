@@ -1,9 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:libertymodel/libertymodel.dart';
-import 'package:libertymodel/models/beaute/prestataire/prestataire.dart';
 import 'package:libertymodel/models/livraison/commande_status_livraison/commande_status_livraison.dart';
-import 'package:libertymodel/models/utilisateur/adresse/adresse.dart';
-import 'package:libertymodel/models/utilisateur/utilisateur/utilisateur.dart';
 import 'package:ntp/ntp.dart';
 
 part 'commande_livraison.g.dart';
@@ -23,6 +20,7 @@ class CommandeLivraison {
     this.restauration,
     this.restaurant,
     this.restaurantCommande,
+    this.codeValidation,
   });
   final String id;
   DateTime? date;
@@ -36,6 +34,7 @@ class CommandeLivraison {
   final bool? restauration;
   final Restaurant? restaurant;
   final List<CommandeRestaurantPanier>? restaurantCommande;
+  String? codeValidation;
 
   setDate() async {
     date = await NTP.now();
@@ -64,6 +63,9 @@ class CommandeLivraison {
                 .map((e) => CommandeRestaurantPanier.fromJson(
                     Map<String, dynamic>.from(e as Map)))
                 .toList()
+            : null,
+        codeValidation: json['codeValidation'] != null
+            ? (json['restaurantCommande'] as String)
             : null,
       );
     } else {
