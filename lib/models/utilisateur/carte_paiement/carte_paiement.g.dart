@@ -25,5 +25,4 @@ Map<String, dynamic> _$CartePaiementToJson(CartePaiement instance) =>
       'cardExpMonth': instance.cardExpMonth,
       'cardExpYear': instance.cardExpYear,
       'cardCvc': instance.cardCvc,
-      'type': instance.type,
     };

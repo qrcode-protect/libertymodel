@@ -9,18 +9,18 @@ part 'commande_restaurant.g.dart';
 
 @JsonSerializable()
 class CommandeRestaurant {
-  CommandeRestaurant({
-    required this.id,
-    required this.restaurant,
-    required this.client,
-    this.livreur,
-    required this.date,
-    required this.restaurantStatus,
-    this.livraisonStatus,
-    required this.restaurantCommande,
-    this.prixLivraison,
-    this.finAttente,
-  });
+  CommandeRestaurant(
+      {required this.id,
+      required this.restaurant,
+      required this.client,
+      this.livreur,
+      required this.date,
+      required this.restaurantStatus,
+      this.livraisonStatus,
+      required this.restaurantCommande,
+      this.prixLivraison,
+      this.finAttente,
+      this.codeValidation});
   final String id;
   final Restaurant restaurant;
   final Utilisateur client;
@@ -31,6 +31,7 @@ class CommandeRestaurant {
   final List<CommandeRestaurantPanier> restaurantCommande;
   double? prixLivraison;
   DateTime? finAttente;
+  String? codeValidation;
 
   setFinAttente(DateTime finAttente) {
     this.finAttente = finAttente;
