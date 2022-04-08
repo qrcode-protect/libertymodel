@@ -31,6 +31,7 @@ CommandeRestaurant _$CommandeRestaurantFromJson(Map json) => CommandeRestaurant(
           ? null
           : DateTime.parse(json['finAttente'] as String),
       codeValidation: json['codeValidation'] as String?,
+      clientCodeValidation: json['clientCodeValidation'] as String?,
     );
 
 Map<String, dynamic> _$CommandeRestaurantToJson(CommandeRestaurant instance) =>
@@ -47,4 +48,5 @@ Map<String, dynamic> _$CommandeRestaurantToJson(CommandeRestaurant instance) =>
       'prixLivraison': instance.prixLivraison,
       'finAttente': instance.finAttente?.toIso8601String(),
       'codeValidation': instance.codeValidation,
+      'clientCodeValidation': instance.clientCodeValidation,
     };

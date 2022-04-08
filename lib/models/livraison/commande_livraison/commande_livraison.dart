@@ -21,6 +21,7 @@ class CommandeLivraison {
     this.restaurant,
     this.restaurantCommande,
     this.codeValidation,
+    this.clientCodeValidation,
   });
   final String id;
   DateTime? date;
@@ -35,6 +36,7 @@ class CommandeLivraison {
   final Restaurant? restaurant;
   final List<CommandeRestaurantPanier>? restaurantCommande;
   String? codeValidation;
+  String? clientCodeValidation;
 
   setDate() async {
     date = await NTP.now();
@@ -65,7 +67,10 @@ class CommandeLivraison {
                 .toList()
             : null,
         codeValidation: json['codeValidation'] != null
-            ? (json['restaurantCommande'] as String)
+            ? (json['codeValidation'] as String)
+            : null,
+        clientCodeValidation: json['clientCodeValidation'] != null
+            ? (json['clientCodeValidation'] as String)
             : null,
       );
     } else {
