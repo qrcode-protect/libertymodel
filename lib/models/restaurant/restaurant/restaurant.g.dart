@@ -44,6 +44,6 @@ Map<String, dynamic> _$RestaurantToJson(Restaurant instance) =>
       'ouvert': instance.ouvert,
       'tempMinPreparation': instance.tempMinPreparation,
       'tempMAxPreparation': instance.tempMAxPreparation,
-      'horairesRestaurant': instance.horairesRestaurant?.toJson(),
       'tempsPreparation': instance.tempsPreparation?.toJson(),
+      'horairesRestaurant': instance.horairesRestaurant?.toJson(),
     };
