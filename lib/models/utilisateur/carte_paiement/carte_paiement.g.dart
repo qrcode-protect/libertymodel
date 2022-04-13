@@ -10,10 +10,10 @@ CartePaiement _$CartePaiementFromJson(Map json) => CartePaiement(
       id: json['id'] as String?,
       type: json['type'] as String?,
       cardType: json['cardType'] as String?,
-      cardNumber: json['cardNumber'] as int?,
-      cardExpMonth: json['cardExpMonth'] as int?,
-      cardExpYear: json['cardExpYear'] as int?,
-      cardCvc: json['cardCvc'] as int?,
+      cardNumber: json['cardNumber'] as String?,
+      cardExpMonth: json['cardExpMonth'] as String?,
+      cardExpYear: json['cardExpYear'] as String?,
+      cardCvc: json['cardCvc'] as String?,
     );
 
 Map<String, dynamic> _$CartePaiementToJson(CartePaiement instance) =>
