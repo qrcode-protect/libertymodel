@@ -17,10 +17,10 @@ class CartePaiement {
   final String? id;
   final String? type;
   final String? cardType;
-  final String? cardNumber;
-  final String? cardExpMonth;
-  final String? cardExpYear;
-  final String? cardCvc;
+  final cardNumber;
+  final cardExpMonth;
+  final cardExpYear;
+  final cardCvc;
 
   factory CartePaiement.fromJson(Map<String, dynamic> json) =>
       _$CartePaiementFromJson(json);
