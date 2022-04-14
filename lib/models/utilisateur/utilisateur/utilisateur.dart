@@ -17,6 +17,7 @@ class Utilisateur {
     this.sexe,
     this.adresse,
     this.cartePaiement,
+    this.cgv,
   });
   final String id;
   final String nom;
@@ -28,6 +29,7 @@ class Utilisateur {
   final bool? sexe;
   final CartePaiement? cartePaiement;
   final Adresse? adresse;
+  final bool? cgv;
   factory Utilisateur.fromJson(Map<String, dynamic> json) =>
       _$UtilisateurFromJson(json);
 
