@@ -5,11 +5,13 @@ part 'app_info.g.dart';
 @JsonSerializable()
 class AppInfo {
   AppInfo({
+    this.id,
     this.version,
     this.buildNumber,
     this.platForm,
   });
 
+  String? id;
   String? version;
   String? buildNumber;
   String? platForm;
