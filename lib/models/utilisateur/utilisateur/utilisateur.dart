@@ -18,7 +18,9 @@ class Utilisateur {
     this.adresse,
     this.cartePaiement,
     this.cgv,
+    this.stripeId,
   });
+
   final String id;
   final String nom;
   final String email;
@@ -30,6 +32,8 @@ class Utilisateur {
   final CartePaiement? cartePaiement;
   final Adresse? adresse;
   final bool? cgv;
+  final String? stripeId;
+
   factory Utilisateur.fromJson(Map<String, dynamic> json) =>
       _$UtilisateurFromJson(json);
 

@@ -23,6 +23,7 @@ Utilisateur _$UtilisateurFromJson(Map json) => Utilisateur(
           : CartePaiement.fromJson(
               Map<String, dynamic>.from(json['cartePaiement'] as Map)),
       cgv: json['cgv'] as bool?,
+      stripeId: json['stripeId'] as String?,
     );
 
 Map<String, dynamic> _$UtilisateurToJson(Utilisateur instance) =>
@@ -38,4 +39,5 @@ Map<String, dynamic> _$UtilisateurToJson(Utilisateur instance) =>
       'cartePaiement': instance.cartePaiement?.toJson(),
       'adresse': instance.adresse?.toJson(),
       'cgv': instance.cgv,
+      'stripeId': instance.stripeId,
     };
