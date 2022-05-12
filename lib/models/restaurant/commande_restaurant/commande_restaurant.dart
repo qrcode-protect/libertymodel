@@ -22,7 +22,9 @@ class CommandeRestaurant {
     this.finAttente,
     this.codeValidation,
     this.clientCodeValidation,
+    this.remarque,
   });
+
   final String id;
   final Restaurant restaurant;
   final Utilisateur client;
@@ -35,6 +37,7 @@ class CommandeRestaurant {
   DateTime? finAttente;
   String? codeValidation;
   String? clientCodeValidation;
+  String? remarque;
 
   setFinAttente(DateTime finAttente) {
     this.finAttente = finAttente;
