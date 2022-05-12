@@ -17,6 +17,7 @@ class CommandeLivraison {
     required this.depart,
     required this.destination,
     required this.colisRecup,
+    required this.estArrive,
     this.restauration,
     this.restaurant,
     this.restaurantCommande,
@@ -32,6 +33,7 @@ class CommandeLivraison {
   final Adresse depart;
   final Adresse destination;
   final bool colisRecup;
+  final bool estArrive;
   final bool? restauration;
   final Restaurant? restaurant;
   final List<CommandeRestaurantPanier>? restaurantCommande;
@@ -53,7 +55,8 @@ class CommandeLivraison {
             CommandeStatusLivraison.fromJson(json['livraisonStatus']),
         depart: Adresse.fromJson(json['restaurant']['adresse']),
         destination: Adresse.fromJson(json['client']['adresse']),
-        colisRecup: json['colisRecup'] != null ? json['colisRecup'] : false,
+        colisRecup: json['colisRecup'] ?? false,
+        estArrive: json['estArrive'] ?? false,
         date: DateTime.parse(json['date'] as String),
         restauration: true,
         restaurant: json['restaurant'] != null
