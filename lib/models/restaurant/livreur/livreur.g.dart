@@ -21,6 +21,7 @@ Livreur _$LivreurFromJson(Map json) => Livreur(
               Map<String, dynamic>.from(json['tarifsLivraison'] as Map)),
       description: json['description'] as String?,
       prixLivraison: (json['prixLivraison'] as num?)?.toDouble() ?? 0.0,
+      nbCommandes: json['nbCommandes'] as int? ?? 0,
     );
 
 Map<String, dynamic> _$LivreurToJson(Livreur instance) => <String, dynamic>{
@@ -34,5 +35,6 @@ Map<String, dynamic> _$LivreurToJson(Livreur instance) => <String, dynamic>{
       'actif': instance.actif,
       'tarifsLivraison': instance.tarifsLivraison?.toJson(),
       'prixLivraison': instance.prixLivraison,
+      'nbCommandes': instance.nbCommandes,
       'description': instance.description,
     };
