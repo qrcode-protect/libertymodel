@@ -19,7 +19,6 @@ class Restaurant {
     this.adresse,
     this.tempMinPreparation,
     this.tempMAxPreparation,
-    this.horairesRestaurant,
     this.tempsPreparation,
   });
 
@@ -34,7 +33,6 @@ class Restaurant {
   num? tempMinPreparation;
   num? tempMAxPreparation;
   PreparationTime? tempsPreparation;
-  HorairesRestaurant? horairesRestaurant;
 
   factory Restaurant.fromJson(Map<String, dynamic> json) =>
       _$RestaurantFromJson(json);
