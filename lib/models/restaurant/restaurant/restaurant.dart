@@ -1,6 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:libertymodel/models/restaurant/categorie_restaurant/categorie_restaurant.dart';
-import 'package:libertymodel/models/restaurant/horaires_restaurant/horaires_restaurant.dart';
 import 'package:libertymodel/models/restaurant/preparation_time/preparation_time.dart';
 import 'package:libertymodel/models/utilisateur/adresse/adresse.dart';
 
@@ -19,7 +18,6 @@ class Restaurant {
     this.adresse,
     this.tempMinPreparation,
     this.tempMAxPreparation,
-    this.horairesRestaurant,
     this.tempsPreparation,
   });
 
@@ -34,7 +32,6 @@ class Restaurant {
   num? tempMinPreparation;
   num? tempMAxPreparation;
   PreparationTime? tempsPreparation;
-  HorairesRestaurant? horairesRestaurant;
 
   factory Restaurant.fromJson(Map<String, dynamic> json) =>
       _$RestaurantFromJson(json);

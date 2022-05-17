@@ -22,10 +22,6 @@ Restaurant _$RestaurantFromJson(Map json) => Restaurant(
           : Adresse.fromJson(Map<String, dynamic>.from(json['adresse'] as Map)),
       tempMinPreparation: json['tempMinPreparation'] as num?,
       tempMAxPreparation: json['tempMAxPreparation'] as num?,
-      horairesRestaurant: json['horairesRestaurant'] == null
-          ? null
-          : HorairesRestaurant.fromJson(
-              Map<String, dynamic>.from(json['horairesRestaurant'] as Map)),
       tempsPreparation: json['tempsPreparation'] == null
           ? null
           : PreparationTime.fromJson(
@@ -45,5 +41,4 @@ Map<String, dynamic> _$RestaurantToJson(Restaurant instance) =>
       'tempMinPreparation': instance.tempMinPreparation,
       'tempMAxPreparation': instance.tempMAxPreparation,
       'tempsPreparation': instance.tempsPreparation?.toJson(),
-      'horairesRestaurant': instance.horairesRestaurant?.toJson(),
     };

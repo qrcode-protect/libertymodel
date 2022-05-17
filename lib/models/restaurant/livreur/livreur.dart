@@ -17,6 +17,7 @@ class Livreur {
     this.tarifsLivraison,
     this.description,
     this.prixLivraison = 0.0,
+    this.nbCommandes = 0,
   });
   final String id;
   final String nom;
@@ -29,6 +30,7 @@ class Livreur {
   TarifsLivraison? tarifsLivraison;
   double? prixLivraison;
   final String? description;
+  int? nbCommandes;
 
   setPrixLivraison(double value) {
     prixLivraison = value;
